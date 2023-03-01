@@ -1,0 +1,322 @@
+header {
+    margin-top: 127px;
+    width: 100%;
+    background: linear-gradient(-45deg, #56125b, #0f0f10, #271e6e);
+    background-size: 400% 400%;
+    animation: header-background 10s ease alternate infinite;
+}
+
+.header__content {
+    padding: 100px 30px 0 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+}
+
+.header__channels {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.header__title {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.header__title--light {
+    display: block;
+    font-size: 32px;
+    font-weight: normal;
+}
+
+.divider {
+    width: 65%;
+    height: 5px;
+    background: var(--divider-bg-color);
+}
+
+.header__offer {
+    font-family: "Quicksand", sans-serif;
+    font-size: 1.25rem;
+}
+
+.header__offer--price {
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.header__subscribe--button {
+    animation: wiggle 2.5s infinite linear;
+}
+
+.header__offer--details {
+    width: 70%;
+}
+
+.header__offer--details {
+    font-family: "Quicksand", sans-serif;
+}
+
+header::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(0deg, var(--primary-color), transparent);
+}
+
+
+main {
+    width: 100%;
+}
+
+section {
+    padding: 0 6%;
+    margin: auto;
+    text-align: center;
+}
+
+.subscribe__title {
+    text-align: center;
+    font-weight: normal;
+    font-size: 2rem;
+}
+
+.subscribe__card {
+    background: var(--card-bg-color);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.card__title {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.card__price {
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: 0;
+    color: var(--secondary-color);
+}
+
+.card__text--small {
+    color: var(--text-color);
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+li {
+    list-style: none;
+    text-align: initial;
+    margin-bottom: 10px;
+}
+
+.card__list li::marker {
+    content: '+ ';
+    font-size: 2rem;
+}
+
+.card__button {
+    max-width: 80%;
+    margin: 40px auto;
+    border-radius: 500px;
+}
+
+.universes {
+    padding: 100px 20px;
+}
+
+.universes__title {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.universes__gallery {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    width: 320px;
+    margin: auto;
+}
+
+.universes__gallery div {
+    width: 310px;
+    min-width: 310px;
+    height: 500px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: 1s;
+}
+
+.universes__gallery div:hover {
+    border: 2px solid var(--tertiary-color)
+}
+
+
+.gallery__hbo {
+    background-image: url('../images/hbo-default_0.webp');
+}
+
+.gallery__hbo:hover {
+    background-image: url('../images/hbo-hover_0.webp');
+}
+
+.gallery__max {
+    background-image: url('../images/MAX-Default.webp');
+}
+
+.gallery__max:hover {
+    background-image: url('../images/MAX-Hover.webp');
+}
+
+.gallery__dc {
+    background-image: url('../images/DC_Default.webp');
+}
+
+.gallery__dc:hover {
+    background-image: url('../images/DC-Hover.webp');
+}
+
+.gallery__wb {
+    background-image: url('../images/WB-Default.webp');
+}
+
+.gallery__wb:hover {
+    background-image: url('../images/WB-Hover.webp');
+}
+
+.gallery__cn {
+    background-image: url('../images/CN-Default.webp');
+}
+
+.gallery__cn:hover {
+    background-image: url('../images/CN-Hover.png');
+}
+
+.gallery__champions {
+    background-image: url('../images/UCL-Default.webp');
+}
+
+.gallery__champions:hover {
+    background-image: url('../images/UCL-Hover.webp');
+}
+
+@media screen and (min-width: 768px) {
+
+    header {
+        margin-top: 60px;
+        overflow: hidden;
+    }
+
+    .header__offer--details {
+        width: 30%;
+    }
+
+    .subscribe {
+        background-image: url('../images/background-movies-series.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 0 12%;
+    }
+
+    .subscribe__title {
+        margin-bottom: 40px;
+    }
+
+    .subscribe__content {
+        display: flex;
+        gap: 7%;
+        justify-content: space-around;
+        perspective: 2000px;
+        perspective-origin: top;
+    }
+
+    .card__price {
+        display: inline;
+    }
+
+    button {
+        letter-spacing: 2px;
+    }
+
+    .subscribe__card {
+        transition: 1s;
+    }
+
+    .subscribe__content:has(#subscribe__card--1:hover) #subscribe__card--2 {
+        transform: rotateY(-45deg);
+    }
+
+    .subscribe__content:has(#subscribe__card--2:hover) #subscribe__card--1 {
+        transform: rotateY(45deg);
+    }
+
+    .universes__gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        width: 80%;
+        margin: auto;
+    }
+}
+
+@keyframes header-background {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-color: 100% 50%;
+    }
+
+    100% {
+        background-color: 0% 50%;
+    }
+}
+
+@keyframes wiggle {
+    0% {
+        transform: rotate(0);
+    }
+
+    15% {
+        transform: rotate(-15deg);
+    }
+
+    20% {
+        transform: rotate(10deg);
+    }
+
+    25% {
+        transform: rotate(-10deg);
+    }
+
+    30% {
+        transform: rotate(10deg);
+    }
+
+    35% {
+        transform: rotate(-10deg);
+    }
+
+    40%,
+    100% {
+        transform: rotate(0);
+    }
+}
